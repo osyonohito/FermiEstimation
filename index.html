@@ -37,6 +37,8 @@
             font-size: 14px;
             color: #777;
         }
+        .illustration {
+            margin-top: 30px;
     </style>
 </head>
 <body>
@@ -47,26 +49,26 @@
         <button onclick="generateProblem('advanced')">上級</button>
     </div>
     <div id="problem" class="problem">ここにお題が表示されます。</div>
+    <div class="illustration">
+        <img src="images/illustration.png" alt="イラスト" width="300">
+    </div>
 
     <script>
         const problems = {
             beginner: [
                 "デイリーの1日の売り上げを推定してください",
                 "ホテルブランの1年の売り上げを推定してください。",
-                "栗駒山の1年間の登山者数を推定してください",
-                "他の初級のお題を追加..."
+                "栗駒山の1年間の登山者数を推定してください"
             ],
             intermediate: [
                 "東京の1年間の電気消費量を推定してください。",
                 "日本全国の図書館の数を推定してください。",
-                "1日の平均的な人の歩数を推定してください。",
-                "他の中級のお題を追加..."
+                "1日の平均的な人の歩数を推定してください。"
             ],
             advanced: [
                 "世界中の1年間の航空便数を推定してください。",
                 "全世界のスマートフォンの年間販売台数を推定してください。",
-                "太平洋に存在するすべての魚の数を推定してください。",
-                "他の上級のお題を追加..."
+                "太平洋に存在するすべての魚の数を推定してください。"
             ]
         };
 
