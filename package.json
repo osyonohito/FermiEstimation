@@ -1,0 +1,16 @@
+{
+  "name": "fermiproj",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "fetchSpecialDays.mjs",
+  "scripts": {
+    "fetch": "node fetchSpecialDays.mjs"
+  },
+  "dependencies": {
+    "node-fetch": "^2.7.0"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
