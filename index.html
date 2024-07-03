@@ -44,7 +44,7 @@
         }
         .bubble {
             position: absolute;
-            top: 150px;  /* 吹き出しをもう少し下に配置 */
+            top: 150px;
             left: 50%;
             transform: translateX(-50%);
             width: 250px;
@@ -57,7 +57,7 @@
         .bubble::after {
             content: '';
             position: absolute;
-            top: -20px; /* 吹き出しの下部に三角形を配置 */
+            top: -20px;
             left: 50%;
             transform: translateX(-50%);
             width: 0;
@@ -80,7 +80,6 @@
 
     <div class="illustration">
         <img src="resources/static/images/illustration.png" alt="イラスト" width="300">
-        <div class="bubble" id="specialDay">ここに「今日は何の日」が表示されます。</div>
     </div>
 
     <script>
@@ -107,14 +106,6 @@
             const randomIndex = Math.floor(Math.random() * levelProblems.length);
             document.getElementById('problem').innerText = levelProblems[randomIndex];
         }
-
-        async function fetchSpecialDays() {
-            const response = await fetch('special_days.json');
-            const data = await response.json();
-            document.getElementById('specialDay').innerText = `今日は「${data[0]}」と「${data[1]}」の日です。`;
-        }
-
-        window.onload = fetchSpecialDays;
     </script>
 
     <div class="footer">
