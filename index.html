@@ -2,58 +2,84 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <title>フェルミ推定 お題</title>
+    <title>日替わりフェルミ推定お題</title>
     <style>
-        body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; }
-        button { font-size: 20px; padding: 10px 20px; margin: 5px; }
-        #problem { margin-top: 20px; font-size: 18px; }
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+            background-color: #f0f0f0;
+            color: #333;
+        }
+        h1 {
+            color: #4CAF50;
+        }
+        button {
+            font-size: 20px;
+            padding: 10px 20px;
+            margin: 5px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .problem {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #333;
+        }
+        .footer {
+            margin-top: 50px;
+            font-size: 14px;
+            color: #777;
+        }
     </style>
 </head>
 <body>
-    <h1>フェルミ推定 お題</h1>
-    <button onclick="showProblem('beginner')">初級のお題</button>
-    <button onclick="showProblem('intermediate')">中級のお題</button>
-    <button onclick="showProblem('advanced')">上級のお題</button>
-    <div id="problem"></div>
+    <h1>日替わりフェルミ推定お題</h1>
+    <div>
+        <button onclick="generateProblem('beginner')">初級</button>
+        <button onclick="generateProblem('intermediate')">中級</button>
+        <button onclick="generateProblem('advanced')">上級</button>
+    </div>
+    <div id="problem" class="problem">ここにお題が表示されます。</div>
 
     <script>
-        const beginnerProblems = [
-            "デイリーの1日の売上",
-            "ホテルブランの1年間の売上",
-            "栗駒山の1年間の登山者数"
-            // 他の初級のフェルミ推定お題を追加...
-        ];
+        const problems = {
+            beginner: [
+                "デイリーの1日の売り上げを推定してください",
+                "ホテルブランの1年の売り上げを推定してください。",
+                "栗駒山の1年間の登山者数を推定してください",
+                "他の初級のお題を追加..."
+            ],
+            intermediate: [
+                "東京の1年間の電気消費量を推定してください。",
+                "日本全国の図書館の数を推定してください。",
+                "1日の平均的な人の歩数を推定してください。",
+                "他の中級のお題を追加..."
+            ],
+            advanced: [
+                "世界中の1年間の航空便数を推定してください。",
+                "全世界のスマートフォンの年間販売台数を推定してください。",
+                "太平洋に存在するすべての魚の数を推定してください。",
+                "他の上級のお題を追加..."
+            ]
+        };
 
-        const intermediateProblems = [
-            "中級のフェルミ推定お題1",
-            "中級のフェルミ推定お題2",
-            "中級のフェルミ推定お題3"
-            // 他の中級のフェルミ推定お題を追加...
-        ];
-
-        const advancedProblems = [
-            "上級のフェルミ推定お題1",
-            "上級のフェルミ推定お題2",
-            "上級のフェルミ推定お題3"
-            // 他の上級のフェルミ推定お題を追加...
-        ];
-
-        function getRandomProblem(problems) {
-            const randomIndex = Math.floor(Math.random() * problems.length);
-            return problems[randomIndex];
-        }
-
-        function showProblem(level) {
-            let problem;
-            if (level === 'beginner') {
-                problem = getRandomProblem(beginnerProblems);
-            } else if (level === 'intermediate') {
-                problem = getRandomProblem(intermediateProblems);
-            } else if (level === 'advanced') {
-                problem = getRandomProblem(advancedProblems);
-            }
-            document.getElementById('problem').innerText = problem;
+        function generateProblem(level) {
+            const levelProblems = problems[level];
+            const randomIndex = Math.floor(Math.random() * levelProblems.length);
+            document.getElementById('problem').innerText = levelProblems[randomIndex];
         }
     </script>
+
+    <div class="footer">
+        <p>フェルミ推定の練習サイトへようこそ。毎日新しいお題に挑戦してください！</p>
+        <p>&copy; 2024 フェルミ推定プロジェクト</p>
+    </div>
 </body>
 </html>
