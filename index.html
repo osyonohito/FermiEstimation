@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>日替わりフェルミ推定お題</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; }
+        button { font-size: 20px; padding: 10px 20px; margin: 5px; }
+        #problem { margin-top: 20px; font-size: 18px; }
+    </style>
+</head>
+<body>
+    <h1>日替わりフェルミ推定お題</h1>
+    <button onclick="showProblem('beginner')">初級のお題</button>
+    <button onclick="showProblem('intermediate')">中級のお題</button>
+    <button onclick="showProblem('advanced')">上級のお題</button>
+    <div id="problem"></div>
+
+    <script>
+        const beginnerProblems = [
+            "初級のフェルミ推定お題1",
+            "初級のフェルミ推定お題2",
+            "初級のフェルミ推定お題3"
+            // 他の初級のフェルミ推定お題を追加...
+        ];
+
+        const intermediateProblems = [
+            "中級のフェルミ推定お題1",
+            "中級のフェルミ推定お題2",
+            "中級のフェルミ推定お題3"
+            // 他の中級のフェルミ推定お題を追加...
+        ];
+
+        const advancedProblems = [
+            "上級のフェルミ推定お題1",
+            "上級のフェルミ推定お題2",
+            "上級のフェルミ推定お題3"
+            // 他の上級のフェルミ推定お題を追加...
+        ];
+
+        function getRandomProblem(problems) {
+            const randomIndex = Math.floor(Math.random() * problems.length);
+            return problems[randomIndex];
+        }
+
+        function showProblem(level) {
+            let problem;
+            if (level === 'beginner') {
+                problem = getRandomProblem(beginnerProblems);
+            } else if (level === 'intermediate') {
+                problem = getRandomProblem(intermediateProblems);
+            } else if (level === 'advanced') {
+                problem = getRandomProblem(advancedProblems);
+            }
+            document.getElementById('problem').innerText = problem;
+        }
+    </script>
+</body>
+</html>
