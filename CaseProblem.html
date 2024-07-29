@@ -3,27 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="styleSheet" href="resource/static/css/style.css">
+    <link rel="stylesheet" href="resource/static/css/style.css">
     <title>フェルミケース お題</title>
 </head>
-<body>
+<body class="case">
     <header>
-        <h1 class="headline">
+        <h1 class="headline case">
             <button id="visionChange" onclick="visionChange()">理念</button>
             <button id="habitChange" onclick="habitChange()">習慣</button>
-            <button id="fermiChange">フェルミ</button>
-            <button id="caseChange" onclick="caseChange()">ケース</button>
+            <button id="fermiChange" onclick="fermiChange()">フェルミ</button>
+            <button id="caseChange">ケース</button>
         </h1>
     </header>
-    <h1>フェルミ推定 お題</h1>
+    <h1 class="case">ケース問題 お題</h1>
     <div>
-        <button onclick="generateFermi()">お題を生成する</button>
+        <button class="case" onclick="generateCase()">お題を生成する</button>
     </div>
     <div id="problem" class="problem">ここにお題が表示されます</div>
     <div class="illustration">
-        <img src="resource/static/images/illustration.png" alt="フェルミの人" width="300">
+        <img src="resource/static/images/illustration.png" alt="ケースの人" width="300">
     </div>
-    <script src="resource/static/js/fermi.js"></script>
+    <script src="resource/static/js/case.js"></script>
     <div class="footer">
         <p>毎日の朝会にお困りのあなたに捧ぐ</p>
         <p>©2024 ぜろしき</p>

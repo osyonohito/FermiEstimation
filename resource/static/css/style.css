@@ -1,0 +1,85 @@
+/* style.css */
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-top: 50px;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+h1 {
+    color: #4CAF50;
+}
+
+button {
+    font-size: 20px;
+    padding: 10px 20px;
+    margin: 5px;
+    background-color: #45A049;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#caseChange {
+    background-color: #03a9f4;
+}
+
+#visionChange {
+    background-color: #ff69b4;
+}
+
+#habitChange {
+    background-color: #460e44;
+}
+
+button:hover {
+    background-color: #45A049;
+}
+
+.problem {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #333;
+}
+
+.footer {
+    margin-top: 30px;
+    position: relative;
+    display: inline-block;
+}
+
+/* ケースページ用のスタイル */
+body.case {
+    background-color: #e0f7fa;
+}
+h1.case {
+    color: #0288d1;
+}
+button.case {
+    background-color: #03a9f4;
+}
+
+/* 理念用のスタイル */
+body.vision{
+    background-color: #ffc0ff;
+}
+h1.vision{
+    color: #db7093;
+}
+button.vision{
+    background-color: #ff69b4;
+}
+
+/* 習慣用のスタイル */
+body.habit{
+    background-color: #c0a2c7;
+}
+h1.habit{
+    color: #884898;
+}
+button.habit{
+    background-color: #460e44;
+}
